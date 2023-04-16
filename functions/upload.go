@@ -1,5 +1,5 @@
 package functions
 
 func Upload() string {
-	return "call func Upload"
+	return "call func Upload!"
 }

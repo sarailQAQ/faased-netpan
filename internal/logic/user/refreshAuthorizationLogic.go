@@ -1,26 +1,21 @@
 package user
 
 import (
-	"cloud-disk/define"
-	"cloud-disk/result"
-	"cloud-disk/utils"
 	"context"
-
-	"cloud-disk/internal/svc"
-	"cloud-disk/internal/types"
-
-	"github.com/zeromicro/go-zero/core/logx"
+	"github.com/sarailQAQ/faased-netpan/internal/define"
+	"github.com/sarailQAQ/faased-netpan/internal/result"
+	"github.com/sarailQAQ/faased-netpan/internal/svc"
+	"github.com/sarailQAQ/faased-netpan/internal/types"
+	"github.com/sarailQAQ/faased-netpan/internal/utils"
 )
 
 type RefreshAuthorizationLogic struct {
-	logx.Logger
 	ctx    context.Context
 	svcCtx *svc.ServiceContext
 }
 
 func NewRefreshAuthorizationLogic(ctx context.Context, svcCtx *svc.ServiceContext) *RefreshAuthorizationLogic {
 	return &RefreshAuthorizationLogic{
-		Logger: logx.WithContext(ctx),
 		ctx:    ctx,
 		svcCtx: svcCtx,
 	}

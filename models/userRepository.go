@@ -1,8 +1,8 @@
 package models
 
 import (
-	"cloud-disk/define"
-	"cloud-disk/internal/types"
+	"github.com/sarailQAQ/faased-netpan/internal/define"
+	"github.com/sarailQAQ/faased-netpan/internal/types"
 	"time"
 	"xorm.io/xorm"
 )
@@ -106,7 +106,7 @@ func (ur UserRepository) GetUserById(engine *xorm.Engine) (*UserRepository, erro
 	return &ur, nil
 }
 
-//根据parentId查询下面是否有文件
+// 根据parentId查询下面是否有文件
 func (ur UserRepository) GetParentIdCount(parent int, engine *xorm.Engine) (int64, error) {
 	return engine.Table(ur.TableName()).Where("parent_id = ? And user_identity = ?", parent, ur.UserIdentity).Where("delete_time = ? OR delete_time IS NULL", time.Time{}.Format(define.DateTime)).Count()
 }

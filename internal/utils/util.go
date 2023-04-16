@@ -1,7 +1,6 @@
 package utils
 
 import (
-	"cloud-disk/define"
 	"context"
 	"crypto/md5"
 	"crypto/tls"
@@ -11,6 +10,7 @@ import (
 	"github.com/jordan-wright/email"
 	"github.com/minio/minio-go/v7"
 	"github.com/minio/minio-go/v7/pkg/credentials"
+	"github.com/sarailQAQ/faased-netpan/internal/define"
 	uuid "github.com/satori/go.uuid"
 	"log"
 	"math/rand"
@@ -103,7 +103,7 @@ func UploadFileToMinio(r *http.Request) (string, error) {
 }
 
 // RandCode
-//生成随机吗
+// 生成随机吗
 func RandCode() string {
 	s := "1234567890"
 	code := ""

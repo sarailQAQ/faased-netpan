@@ -1,26 +1,22 @@
 package user
 
 import (
-	"cloud-disk/models"
-	"cloud-disk/result"
-	"cloud-disk/utils"
 	"context"
 
-	"cloud-disk/internal/svc"
-	"cloud-disk/internal/types"
-
-	"github.com/zeromicro/go-zero/core/logx"
+	"github.com/sarailQAQ/faased-netpan/internal/result"
+	"github.com/sarailQAQ/faased-netpan/internal/svc"
+	"github.com/sarailQAQ/faased-netpan/internal/types"
+	"github.com/sarailQAQ/faased-netpan/internal/utils"
+	"github.com/sarailQAQ/faased-netpan/models"
 )
 
 type UserDirCreateLogic struct {
-	logx.Logger
 	ctx    context.Context
 	svcCtx *svc.ServiceContext
 }
 
 func NewUserDirCreateLogic(ctx context.Context, svcCtx *svc.ServiceContext) *UserDirCreateLogic {
 	return &UserDirCreateLogic{
-		Logger: logx.WithContext(ctx),
 		ctx:    ctx,
 		svcCtx: svcCtx,
 	}

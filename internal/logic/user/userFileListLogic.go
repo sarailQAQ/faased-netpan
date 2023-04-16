@@ -1,25 +1,21 @@
 package user
 
 import (
-	"cloud-disk/internal/svc"
-	"cloud-disk/internal/types"
-	"cloud-disk/models"
-	"cloud-disk/result"
-	"cloud-disk/utils"
 	"context"
-
-	"github.com/zeromicro/go-zero/core/logx"
+	"github.com/sarailQAQ/faased-netpan/internal/result"
+	"github.com/sarailQAQ/faased-netpan/internal/svc"
+	"github.com/sarailQAQ/faased-netpan/internal/types"
+	"github.com/sarailQAQ/faased-netpan/internal/utils"
+	"github.com/sarailQAQ/faased-netpan/models"
 )
 
 type UserFileListLogic struct {
-	logx.Logger
 	ctx    context.Context
 	svcCtx *svc.ServiceContext
 }
 
 func NewUserFileListLogic(ctx context.Context, svcCtx *svc.ServiceContext) *UserFileListLogic {
 	return &UserFileListLogic{
-		Logger: logx.WithContext(ctx),
 		ctx:    ctx,
 		svcCtx: svcCtx,
 	}
@@ -36,10 +32,10 @@ func (l *UserFileListLogic) UserFileList(req *types.UserFileListRequest, userIde
 	//获取条数
 	session := l.svcCtx.Engine.NewSession()
 	session = session.Table("user_repository").Where("parent_id=? and user_identity=?", req.Id, userIdentity)
-	if req.Type != "all" {
-		session = session.Table("user_repository").Where("parent_id=? and user_identity=? and type = ?", req.Id, userIdentity, req.Type)
-
-	}
+	//if req.Type != "all" {
+	//	session = session.Table("user_repository").Where("parent_id=? and user_identity=? and type = ?", req.Id, userIdentity, req.Type)
+	//
+	//}
 	count, err := session.Count(new(models.UserRepository))
 	if err != nil {
 		resp.Result = result.ERROR(utils.FormatErrorLog(err))
