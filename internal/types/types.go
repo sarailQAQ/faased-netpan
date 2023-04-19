@@ -81,6 +81,7 @@ type UserFileListRequest struct {
 	Id   int64 `form:"id,optional"`
 	Page int   `form:"page"`
 	Size int   `form:"size"`
+	Type string `form:"type"`
 }
 
 type UserFileListResponse struct {

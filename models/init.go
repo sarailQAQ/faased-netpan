@@ -1,9 +1,9 @@
 package models
 
 import (
-	"cloud-disk/internal/config"
 	"github.com/go-redis/redis/v8"
 	_ "github.com/go-sql-driver/mysql"
+	"github.com/sarailQAQ/faased-netpan/internal/config"
 	"log"
 	"xorm.io/xorm"
 )

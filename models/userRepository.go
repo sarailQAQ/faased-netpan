@@ -106,12 +106,12 @@ func (ur UserRepository) GetUserById(engine *xorm.Engine) (*UserRepository, erro
 	return &ur, nil
 }
 
-// 根据parentId查询下面是否有文件
+// GetParentIdCount 根据parentId查询下面是否有文件
 func (ur UserRepository) GetParentIdCount(parent int, engine *xorm.Engine) (int64, error) {
 	return engine.Table(ur.TableName()).Where("parent_id = ? And user_identity = ?", parent, ur.UserIdentity).Where("delete_time = ? OR delete_time IS NULL", time.Time{}.Format(define.DateTime)).Count()
 }
 
-// GetByIdentityAndUserIdentity 根据Identity和UserIdentity查询资源
+// GetByRepositoryIdentityAndUserIdentity 根据Identity和UserIdentity查询资源
 func (ur UserRepository) GetByRepositoryIdentityAndUserIdentity(engine *xorm.Engine) (int64, error) {
 	return engine.Table(ur.TableName()).Where("repository_identity=? AND user_identity = ? And parent_id = ?", ur.RepositoryIdentity, ur.UserIdentity, ur.ParentId).Where("delete_time = ? OR delete_time IS NULL", time.Time{}.Format(define.DateTime)).Count()
 }
