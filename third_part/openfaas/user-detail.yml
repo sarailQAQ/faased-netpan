@@ -5,6 +5,6 @@ provider:
 functions:
   user-detail:
     lang: golang-middleware
-    handler: ././third_part/openfaas/handlers/user-detail-handler
+    handler: ./handlers/user-detail-handler
     image: user-detail:latest
 

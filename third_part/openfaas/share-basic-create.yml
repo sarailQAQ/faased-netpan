@@ -5,6 +5,6 @@ provider:
 functions:
   share-basic-create:
     lang: golang-middleware
-    handler: ././third_part/openfaas/handlers/share-basic-create-handler
+    handler: ./handlers/share-basic-create-handler
     image: share-basic-create:latest
 

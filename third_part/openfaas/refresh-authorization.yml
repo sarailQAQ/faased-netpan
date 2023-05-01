@@ -5,6 +5,6 @@ provider:
 functions:
   refresh-authorization:
     lang: golang-middleware
-    handler: ././third_part/openfaas/handlers/refresh-authorization-handler
+    handler: ./handlers/refresh-authorization-handler
     image: refresh-authorization:latest
 

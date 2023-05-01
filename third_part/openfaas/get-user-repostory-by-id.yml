@@ -5,6 +5,6 @@ provider:
 functions:
   get-user-repostory-by-id:
     lang: golang-middleware
-    handler: ././third_part/openfaas/handlers/get-user-repostory-by-id-handler
+    handler: ./handlers/get-user-repostory-by-id-handler
     image: get-user-repostory-by-id:latest
 

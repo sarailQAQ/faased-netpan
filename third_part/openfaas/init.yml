@@ -5,6 +5,6 @@ provider:
 functions:
   init:
     lang: golang-middleware
-    handler: ././third_part/openfaas/handlers/init-handler
+    handler: ./handlers/init-handler
     image: init:latest
 

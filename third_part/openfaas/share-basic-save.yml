@@ -5,6 +5,6 @@ provider:
 functions:
   share-basic-save:
     lang: golang-middleware
-    handler: ././third_part/openfaas/handlers/share-basic-save-handler
+    handler: ./handlers/share-basic-save-handler
     image: share-basic-save:latest
 

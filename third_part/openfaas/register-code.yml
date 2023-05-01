@@ -5,6 +5,6 @@ provider:
 functions:
   register-code:
     lang: golang-middleware
-    handler: ././third_part/openfaas/handlers/register-code-handler
+    handler: ./handlers/register-code-handler
     image: register-code:latest
 

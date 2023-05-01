@@ -5,6 +5,6 @@ provider:
 functions:
   user-delete-file:
     lang: golang-middleware
-    handler: ././third_part/openfaas/handlers/user-delete-file-handler
+    handler: ./handlers/user-delete-file-handler
     image: user-delete-file:latest
 

@@ -5,6 +5,6 @@ provider:
 functions:
   user-file-list:
     lang: golang-middleware
-    handler: ././third_part/openfaas/handlers/user-file-list-handler
+    handler: ./handlers/user-file-list-handler
     image: user-file-list:latest
 

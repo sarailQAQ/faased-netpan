@@ -5,6 +5,6 @@ provider:
 functions:
   register:
     lang: golang-middleware
-    handler: ././third_part/openfaas/handlers/register-handler
+    handler: ./handlers/register-handler
     image: register:latest
 

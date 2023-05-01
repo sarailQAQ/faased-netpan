@@ -5,6 +5,6 @@ provider:
 functions:
   user-dir-create:
     lang: golang-middleware
-    handler: ././third_part/openfaas/handlers/user-dir-create-handler
+    handler: ./handlers/user-dir-create-handler
     image: user-dir-create:latest
 

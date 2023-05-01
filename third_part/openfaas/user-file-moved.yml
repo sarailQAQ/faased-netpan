@@ -5,6 +5,6 @@ provider:
 functions:
   user-file-moved:
     lang: golang-middleware
-    handler: ././third_part/openfaas/handlers/user-file-moved-handler
+    handler: ./handlers/user-file-moved-handler
     image: user-file-moved:latest
 

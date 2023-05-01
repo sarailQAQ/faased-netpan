@@ -5,6 +5,6 @@ provider:
 functions:
   share-basic-detail:
     lang: golang-middleware
-    handler: ././third_part/openfaas/handlers/share-basic-detail-handler
+    handler: ./handlers/share-basic-detail-handler
     image: share-basic-detail:latest
 

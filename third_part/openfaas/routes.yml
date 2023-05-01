@@ -5,6 +5,6 @@ provider:
 functions:
   routes:
     lang: golang-middleware
-    handler: ././third_part/openfaas/handlers/routes-handler
+    handler: ./handlers/routes-handler
     image: routes:latest
 

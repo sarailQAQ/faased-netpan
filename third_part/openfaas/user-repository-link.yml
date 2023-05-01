@@ -5,6 +5,6 @@ provider:
 functions:
   user-repository-link:
     lang: golang-middleware
-    handler: ././third_part/openfaas/handlers/user-repository-link-handler
+    handler: ./handlers/user-repository-link-handler
     image: user-repository-link:latest
 

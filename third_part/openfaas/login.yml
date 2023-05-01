@@ -5,6 +5,6 @@ provider:
 functions:
   login:
     lang: golang-middleware
-    handler: ././third_part/openfaas/handlers/login-handler
+    handler: ./handlers/login-handler
     image: login:latest
 

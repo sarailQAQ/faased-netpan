@@ -5,6 +5,6 @@ provider:
 functions:
   upload-file:
     lang: golang-middleware
-    handler: ././third_part/openfaas/handlers/upload-file-handler
+    handler: ./handlers/upload-file-handler
     image: upload-file:latest
 
