@@ -3,8 +3,8 @@ provider:
   name: openfaas
   gateway: http://localhost:31112
 functions:
-  upload:
+  login:
     lang: golang-middleware
-    handler: ./upload
-    image: upload:latest
+    handler: ././third_part/openfaas/handlers/login-handler
+    image: login:latest
 

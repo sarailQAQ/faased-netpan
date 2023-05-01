@@ -1,0 +1,10 @@
+version: 1.0
+provider:
+  name: openfaas
+  gateway: http://localhost:31112
+functions:
+  user-dir-create:
+    lang: golang-middleware
+    handler: ././third_part/openfaas/handlers/user-dir-create-handler
+    image: user-dir-create:latest
+

@@ -1,0 +1,10 @@
+version: 1.0
+provider:
+  name: openfaas
+  gateway: http://localhost:31112
+functions:
+  upload-file:
+    lang: golang-middleware
+    handler: ././third_part/openfaas/handlers/upload-file-handler
+    image: upload-file:latest
+

@@ -1,0 +1,10 @@
+version: 1.0
+provider:
+  name: openfaas
+  gateway: http://localhost:31112
+functions:
+  user-repository-link:
+    lang: golang-middleware
+    handler: ././third_part/openfaas/handlers/user-repository-link-handler
+    image: user-repository-link:latest
+

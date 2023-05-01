@@ -1,0 +1,10 @@
+version: 1.0
+provider:
+  name: openfaas
+  gateway: http://localhost:31112
+functions:
+  user-file-list:
+    lang: golang-middleware
+    handler: ././third_part/openfaas/handlers/user-file-list-handler
+    image: user-file-list:latest
+

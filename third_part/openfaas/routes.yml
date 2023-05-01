@@ -1,0 +1,10 @@
+version: 1.0
+provider:
+  name: openfaas
+  gateway: http://localhost:31112
+functions:
+  routes:
+    lang: golang-middleware
+    handler: ././third_part/openfaas/handlers/routes-handler
+    image: routes:latest
+

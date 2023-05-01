@@ -1,0 +1,10 @@
+version: 1.0
+provider:
+  name: openfaas
+  gateway: http://localhost:31112
+functions:
+  user-delete-file:
+    lang: golang-middleware
+    handler: ././third_part/openfaas/handlers/user-delete-file-handler
+    image: user-delete-file:latest
+
