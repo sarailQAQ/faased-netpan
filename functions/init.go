@@ -8,5 +8,5 @@ import (
 var svcCtx *svc.ServiceContext
 
 func InitSvc(c *config.Config) {
-	svcCtx = svc.NewServiceContext(c)
+	svcCtx = svc.NewServiceContext(*c)
 }
